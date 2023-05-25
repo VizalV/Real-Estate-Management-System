@@ -1,0 +1,54 @@
+--  create table sellproperty(
+--     name varchar(20),
+--     mobile_no varchar(20),
+--     looking_to varchar(4),
+--     property_type varchar(20),
+--     door_no int,
+--     address varchar(70),
+--     city varchar(15),
+--     state varchar(15),
+--     pincode int,
+--     bedrooms int,
+--     plot_area int,
+--     furnishing varchar(20),
+--     total_floors int,
+--     floor int,
+--     plotlength int,
+--     plotbreadth int,
+--     availability varchar(20),
+--     expected_price int,
+--     price_per_sqft int,
+--     price_negotiable varchar(3),
+--     description varchar(120),
+--     status varchar(20)
+-- );
+
+mysql> desc sellproperty;
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| name           | varchar(20)  | YES  |     | NULL    |       |
+| mobile_no      | varchar(20)  | YES  |     | NULL    |       |
+| looking_to     | varchar(4)   | YES  |     | NULL    |       |
+| property_type  | varchar(20)  | YES  |     | NULL    |       |
+| door_no        | int(11)      | YES  |     | NULL    |       |
+| address        | varchar(70)  | YES  |     | NULL    |       |
+| city           | varchar(15)  | YES  |     | NULL    |       |
+| state          | varchar(15)  | YES  |     | NULL    |       |
+| pincode        | int(11)      | YES  |     | NULL    |       |
+| bedrooms       | int(11)      | YES  |     | NULL    |       |
+| plot_area      | int(11)      | YES  |     | NULL    |       |
+| furnishing     | varchar(20)  | YES  |     | NULL    |       |
+| total_floors   | int(11)      | YES  |     | NULL    |       |
+| floor          | int(11)      | YES  |     | NULL    |       |
+| plotlength     | int(11)      | YES  |     | NULL    |       |
+| plotbreadth    | int(11)      | YES  |     | NULL    |       |
+| availability   | varchar(20)  | YES  |     | NULL    |       |
+| expected_price | int(11)      | YES  |     | NULL    |       |
+| description    | varchar(120) | YES  |     | NULL    |       |
+| status         | varchar(20)  | YES  |     | NULL    |       |
+| id             | varchar(20)  | NO   | PRI | NULL    |       |
+| location       | varchar(50)  | YES  |     | NULL    |       |
+| countid        | varchar(10)  | NO   | PRI | NULL    |       |
+| drive_link     | varchar(170) | YES  |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+

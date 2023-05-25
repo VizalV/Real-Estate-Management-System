@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell</title>
+    <link rel="stylesheet" href="sell.css">
+</head>
+<script>
+    function choice(x) {
+        console.log("hi");
+        if(x==1 || x==3)
+        {
+            document.getElementById("deets").innerHTML=`<br>
+                <div class="bedroom">
+                    <label for="">No. of bedrooms</label><br>
+                    <input type="radio" name="bed">1
+                    <input type="radio" name="bed">2
+                    <input type="radio" name="bed">3
+                    <input type="radio" name="bed">4<br>
+                </div>
+
+                <div class="area">
+                    <label for="">Area of plot</label><br>
+                    <input type="number" name="area" placeholder="Plot Area in sqft."><br>
+                </div>
+                
+                <div class="furnishing">
+                    <label for="">Furnishing</label><br>
+                    <input type="radio" name="furnished">Furnished
+                    <input type="radio" name="furnished">Semi-Furnished
+                    <input type="radio" name="furnished">Un-Furnished<br>
+                </div>
+
+                <div class="floor">
+                    <label for="">Floor Details</label><br>
+                    <input type="number" name="floor" placeholder="Total Floors"><br>
+                </div>
+                
+                <div class="available">
+                    <label for="">Availability</label><br>
+                    <input type="radio" name="availibility" id="">Ready to move
+                    <input type="radio" name="availibility">Under Construction
+                </div>
+            `
+        }
+        else if(x==2)
+        {
+            document.getElementById("deets").innerHTML=`<br>
+                <div class="bedroom">
+                    <label for="">No. of bedrooms</label><br>
+                    <input type="radio" name="bhk">2BHK
+                    <input type="radio" name="bhk">3BHK
+                    <input type="radio" name="bhk" onclick="fun()">Other
+                    <input type="number" id="others" placeholder="Enter bedroom count"><br>
+                </div>
+                <div class="area">
+                    <label for="">Area of plot</label><br>
+                    <input type="number" placeholder="Area in sqft."><br>
+                </div>
+                <div class="floor">
+                    <label for="">Floor Details</label><br>
+                    <input type="number" placeholder="Total Floors">
+                    <input type="number" placeholder="Property on Floor"><br>
+                </div>
+                <div class="availability">
+                    <label for="">Availability</label><br>
+                    <input type="radio" name="availability" id="">Ready to move
+                    <input type="radio" name="availability">Under Construction
+                </div>
+            `
+        }
+        else if(x==4)
+        {
+            document.getElementById("deets").innerHTML=`<br>
+                <div class="area">
+                    <label for="area">Area of plot</label><br>
+                    <input type="number" placeholder="Plot Area in sqft."><br><br>
+
+                    <label for="property">Property Dimensions</label><br>
+                    <input type="number" placeholder="Length of plot(in sqft)">
+                    <input type="number" placeholder="Breadth of plot(in sqft)"><br>
+                </div>
+                <div class="floor-plot">
+                    <label for="floor">Floor Details</label><br>
+                    <input type="text" class="floors-allowed" placeholder="Floors allowed for construction">
+                </div>
+               
+            `
+        }
+    }
+</script>   
+<body>
+    <div class="navbar">
+        <ul>
+            <li class="logo">
+            <img src="logo.png" alt="" height="50px" width="80px"><span class="website-name"><span class="u">U</span>rban<span class="u">U</span>topia</span>
+            </li>
+            <li class="start"><a href="account.jsp">Home</a></li>
+            <li class="nav-item"><a href="properties.jsp">Properties</a></li>
+            <li class="nav-item" id="active"><a href="sell.jsp" >Sell</a></li>
+            <li class="nav-item"><a href="#">About Us</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+            <li class="nav-item">
+                <a href="landing.html"><img src="https://static-00.iconduck.com/assets.00/logout-icon-512x512-2x08s84n.png" class="login" alt="logout" height="40px" width="50px"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <form action="">
+            <div class="personal">
+                <label for="">Name</label><br>
+                <input type="text" name="owner" placeholder="Name"><br><br>
+                <label for="">Mobile number</label><br>
+                <input type="tel" name="phno" pattern="[1-9]{1}[0-9]{9}" placeholder="Mobile no."><br>  
+            </div>
+            
+            <div class="lookingto">
+                <label for="">Looking to</label><br>
+                <input type="radio" name="looking">Sell
+                <input type="radio" name="looking">Rent<br>
+            </div>
+            
+            <div class="property-type">
+                <label for="">Type of property</label><br>
+                <input type="radio" name="type" id="type" value="1" onclick="choice(1)">Induvidual House
+                <input type="radio" name="type" id="type" value="2" onclick="choice(2)">Apartment
+                <input type="radio" name="type" id="type" value="3" onclick="choice(3)">Villa
+                <input type="radio" name="type" id="type" value="4" onclick="choice(4)">Plot<br>
+            </div>
+            <legend>Location Details</legend><br>
+            <fieldset><br>
+                <label for="">Door number</label><br>
+                <input type="text" name="door" placeholder="Door no."><br><br>
+                <label for="">Address of property</label><br>
+                <input type="textarea" name="address" id="address" placeholder="Enter full address">
+                
+                <div class="location-label">
+                    <label for="">City</label>
+                    <label for="" id="state-label">State</label>
+                    <label for="" id="pincode-label">Pincode</label>
+                    </div>
+                <div class="location">
+                    <input type="text" name="city" id="city" placeholder="City">
+                    <input type="text" name="state" id="state" placeholder="State">
+                    <input type="number" name="pincode" id="pincode" pattern="[0-9]{6}" placeholder="Pincode">
+                    </div>
+            </fieldset>
+
+            <legend>Property Details</legend><br>
+            <fieldset id="deets"><br>
+                <div class="bedroom">
+                    <label for="">No. of bedrooms</label><br>
+                    <input type="radio" name="bed">1
+                    <input type="radio" name="bed">2
+                    <input type="radio" name="bed">3
+                    <input type="radio" name="bed">4<br>
+                </div>
+
+                <div class="area">
+                    <label for="">Area of plot</label><br>
+                    <input type="number" name="area" placeholder="Plot Area in sqft."><br>
+                </div>
+                
+                <div class="furnishing">
+                    <label for="">Furnishing</label><br>
+                    <input type="radio" name="furnished">Furnished
+                    <input type="radio" name="furnished">Semi-Furnished
+                    <input type="radio" name="furnished">Un-Furnished<br>
+                </div>
+
+                <div class="floor">
+                    <label for="">Floor Details</label><br>
+                    <input type="number" name="floor" placeholder="Total Floors"><br>
+                </div>
+                
+                <div class="available">
+                    <label for="">Availability</label><br>
+                    <input type="radio" name="availibility" id="">Ready to move
+                    <input type="radio" name="availibility">Under Construction
+                </div>
+            </fieldset>
+
+            <legend>Property Images and Documents</legend><br>
+            <fieldset>
+                <input type="file" multiple placeholder="Files">Upload Documents<br>
+                <input type="file" multiple placeholder="images">Upload property images (atleast 50)<br>
+            </fieldset>
+
+            <legend>Property Price</legend><br>
+            <fieldset>
+                <br><label for="">Pricing</label><br>
+                <input type="number" name="expectedprice" placeholder="Expected Price">
+                <input type="number" name="pricepersqft" placeholder="Price per sqft"><br><br>
+                <label for="">Prices Negotiable</label><br>
+                <input type="radio" name="negotiable" id="">Yes
+                <input type="radio" name="negotiable" id="">No
+            </fieldset>
+
+            <legend>What makes your property unique?</legend><br>
+            <textarea id="spl" name="description" placeholder="Describe other features of your property for better reach"></textarea><br>
+            <button>SUBMIT</button>
+            
+        </form>
+    </div>
+    <script>
+        function fun(){
+            document.getElementById('others').style.display="inline-block";
+        }
+    </script>
+</body>
+</html>

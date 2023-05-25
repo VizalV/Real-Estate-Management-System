@@ -1,0 +1,213 @@
+html{
+    margin: 0px;
+}
+body
+{
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ) ,url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHw%3D&w=1000&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navbar{
+    margin-top: -15px;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    position: sticky;
+    background-image: linear-gradient(to bottom,#18212C,#1F252D);
+}
+.logo{
+    display: inline-block;
+    left: -5px;
+    margin-top: 2px;
+    font-size: 27px;
+    color: white;
+    padding: 10px;
+}
+.u{
+    color:rgb(109, 173, 203);
+    font-weight: bold;
+    text-shadow: 1px 1px rgb(16, 117, 164);
+}
+ul{
+    list-style: none;
+    padding: 0px;
+}
+.start{
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px 25px 10px 19%;
+    font-size: 27px;
+}
+.login{
+    background-color: rgb(16, 117, 164);
+    position: relative;
+    top:8px;
+    padding:0px;
+    margin:0px;
+}
+.nav-item:hover,.start:hover{
+    transform: scale(1.07);
+    background-color:rgb(16, 117, 164) ;
+}
+#active{
+    background-color:rgb(16, 117, 164) ;
+    padding: 10px;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav-item{
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px 25px;
+    font-size: 27px;
+}
+.propty{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px 25px;
+    font-size: 15px;
+}
+.content{
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+.data{
+    margin-top: 10%;
+    margin-left: 8%;
+}
+p{
+    width: 90%;
+    text-align: center;
+    color: white;
+    background-color:rgba(25, 158, 241, 0.25);
+    padding: 20px;
+    /* cursor: pointer; */
+    margin-bottom: 5%;
+}
+
+/* p:hover{
+    transform: scale(1.07);
+    background-color:rgba(25, 158, 241, 0.442);
+} */
+
+.main{
+    margin-top: 5%;
+    margin-left: 5%;
+    color: white;
+    overflow:hidden;
+}
+form{
+    font-size: 20px;
+}
+input{
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+}
+input[type="file"]{
+    color: black;
+}
+label{
+    margin: 5% 1% 1% 1%;
+    padding-top: 0px;
+    font-size: 25px;
+}
+.personal,.lookingto,.bedroom,.floor,.furnishing,.area{
+    margin-bottom: 3%;
+}
+
+.floor-plot{
+    margin-bottom: 0px;
+}
+legend{
+    margin-top: 5%;
+    font-size: 30px;
+}   
+fieldset
+{
+    width: 90%;
+    background-color:rgba(25, 158, 241, 0.1)
+}
+textarea{
+    background-color:rgba(25, 158, 241, 0.1);
+    color: white;
+    font-size: 20px;
+}
+#address{
+    width: 96.5%;
+}
+.location,.location-label{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.location-label{
+    margin-top: -3%;
+}
+#state-label{
+    position: relative;
+    right:6.5%;
+}
+#pincode-label{
+    position: relative;
+    right: 14.5%;
+}
+#spl{
+    width: 92%;
+    height: 300px;
+}
+#general{
+    background-color: rgb(16, 117, 164);
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 20px 25px;
+    border-radius: 50px;
+    box-shadow: 1px 5px rgb(193, 229, 247);
+    border: none;
+    width: 20%;
+    margin: 3% 34% 2% 34%;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+#general:hover,#update:hover,#delete:hover{
+    transform: scale(1.07);
+}
+#update{
+    background-color: green;
+    font-size: 20px;
+    width: auto;
+    margin: none;
+    color: black;
+    cursor: pointer;
+}
+#delete{
+    background-color: red;
+    font-size: 20px;
+    width: auto;
+    color: black;
+    cursor: pointer;
+}
+.floors-allowed{
+    width: 22%;
+}
+#others{
+    display: none;
+}
+#floor{
+    padding-right: 20%;
+}
